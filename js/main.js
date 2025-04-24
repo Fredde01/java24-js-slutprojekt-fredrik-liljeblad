@@ -55,20 +55,29 @@ sortSelect.addEventListener('change', () => {
 
     if (currentSearchResults.length > 0) {
         
+        // PROBLEM: När användaren sökte på en person och försökte sortera, visades istället filmer med samma namn.
+        // LÖSNING: Dela upp sökresultaten i två listor (filmer och personer), sortera och rendera dem var för sig.
+
+        // Returnar en ny lista med bara filmer
         const movies = currentSearchResults.filter(item => item.media_type === 'movie');
+
+        // Returnerar en ny lista med bara personer
         const people = currentSearchResults.filter(item => item.media_type === 'person');
 
+        // Sortera och rendera filmer om det finns några
         if (movies.length) {
             sortedResults = sortMoviesOrPeople(movies, sortCriteria); 
             renderMovies(sortedResults, resultsContainer);
         }
 
+        // Sortera och rendera personer om det finns några
         if (people.length) {
             sortedResults = sortMoviesOrPeople(people, sortCriteria); 
             renderPeople(sortedResults, resultsContainer);
         }
     } else if (currentMovies.length > 0) {
         
+        // Annars om användaren klickar på top rated/popular, sortera dessa
         sortedResults = sortMoviesOrPeople(currentMovies, sortCriteria);
         renderMovies(sortedResults, resultsContainer);
     }
