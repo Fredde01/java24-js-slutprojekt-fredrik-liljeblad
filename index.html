@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moviedatabase</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🍿 Moviedatabase</h1>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search movie or actor.." />
+            <button type="submit">Search</button>
+        </form>
+        <div class="buttons">
+            <button id="topRatedBtn">Top Rated</button>
+            <button id="popularBtn">Popular</button>
+        </div>
+        <div class="sort-options">
+            <label for="sortSelect">Sort:</label>
+            <select id="sortSelect">
+                <option value="title-asc">Title A-Ö</option>
+                <option value="title-desc">Title Ö-A</option>
+                <option value="popularity-asc">Popularity ↑</option>
+                <option value="popularity-desc">Popularity ↓</option>
+            </select>
+        </div>
+    </header>
+    
+
+    <main>
+        <div id="results" class="grid-container"></div>
+    </main>
+
+    <footer>
+        <p>@ Moviedatabase, by Fredde</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

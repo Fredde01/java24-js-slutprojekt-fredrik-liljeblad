@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #711324;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+form {
+    margin-top: 1em;
+}
+
+input[type="text"] {
+    padding: 0.5em;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #FFC72C;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.3em;
+
+}
+
+button:hover {
+    background-color: gray;
+}
+
+.sort-options {
+    margin-top: 1em;
+}
+
+select {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1em;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: #711324;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+}
