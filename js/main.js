@@ -42,9 +42,7 @@ searchForm.addEventListener('submit', async (e) => {
         currentMovies = currentSearchResults.filter(item => item.media_type === 'movie');
         currentPeople = currentSearchResults.filter(item => item.media_type === 'person');
         
-        
-        if (currentMovies.length > 0) renderMovies(currentMovies, resultsContainer);
-        if (currentPeople.length > 0) renderPeople(currentPeople, resultsContainer);
+    
     }
 });
 
@@ -54,9 +52,6 @@ sortSelect.addEventListener('change', () => {
     let sortedResults = [];
 
     if (currentSearchResults.length > 0) {
-        
-        // PROBLEM: När användaren sökte på en person och försökte sortera, visades istället filmer med samma namn.
-        // LÖSNING: Dela upp sökresultaten i två listor (filmer och personer), sortera och rendera dem var för sig.
 
         // Returnar en ny lista med bara filmer
         const movies = currentSearchResults.filter(item => item.media_type === 'movie');

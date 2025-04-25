@@ -4,7 +4,7 @@ import { IMG_BASE_URL } from './api.js';
 
 // Funktion för att rendera filmer
 export function renderMovies(movies, container) {
-    container.innerHTML = '';
+    container.innerHTML = '';   
     movies.forEach(movie => {
         const div = document.createElement('div');
         div.classList.add('card');
@@ -25,7 +25,6 @@ export function renderMovies(movies, container) {
 
 // Funktion för att rendera personer(Skådespelare)
 export function renderPeople(people, container) {
-    container.innerHTML = '';
     people.forEach(person => {
         const div = document.createElement('div');
         div.classList.add('card');

@@ -20,6 +20,14 @@ form {
     margin-top: 1em;
 }
 
+.error-message {
+    color: red;
+    font-weight: bold;
+
+  }
+  
+  
+
 input[type="text"] {
     padding: 0.5em;
     width: 300px;
